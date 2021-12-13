@@ -1,11 +1,15 @@
-services:
-  web:
-    build: .
-    ports:
-      - "5000:5000"
-    volumes:
-      - .:/usr/src/ai-bot-app
+version: "3.6"
 
+services:
+
+  app:
+    build: .
+    tty: true
+    volumes:
+      - .:/usr/src/ai-chatbot
+    depends_on:
+      - db
+      
   db:
     image: mongo
     restart: always

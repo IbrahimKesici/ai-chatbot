@@ -1,5 +1,2 @@
-FROM python:3.11-rc-alpine
-
-WORKDIR ./ai_chatbot
-COPY . .
-RUN pip3 install -r requirements.txt --no-cache
+nltk==3.6.5
+numpy==1.21.4
